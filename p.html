@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="IE=edge" >
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-<title>牢记群号ssss</title>
+<title>转发看更多</title>
 <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.23/skins/default/aliplayer-min.css" />
 <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.23/aliplayer-min.js"></script>
 </head>
 <body>
+<script>
+location.href="https://sharechain.qq.com/2681800d3919a278f7011e72c3caee7c";
+</script>
 <body bgcolor="black">
 <div class="prism-player" id="player-con"></div>
 <script>
@@ -24,11 +27,11 @@ if(url.indexOf("http") == -1) {//不存在url
 
 
 se = setTimeout(function () { 
- var msg = "======确认一下加入我们看更多======点击取消继续观看当前页面"; 
+ var msg = "点击确定加群看更多，点击取消继续观看当前视频"; 
  if (confirm(msg)==true){ 
-  window.location.href='加群连接';
+  window.location.href='https://sharechain.qq.com/2681800d3919a278f7011e72c3caee7c';
  }
-}, 3000);
+}, 180000);
 
 
 
@@ -48,10 +51,22 @@ var player = new Aliplayer({
     console.log("The player is created");
   }
 );
+try{}catch(e){}
+var elevideo = document.querySelector("#player-con > video");
+  //  elevideo.addEventListener('loadedmetadata', function () {视频的总长度 elevideo.duration});
+    
+    //elevideo.addEventListener('play', function () {console.log("开始播放");});
+   // elevideo.addEventListener('playing', function () { console.log("播放中");});
+      elevideo.addEventListener('pause', function () { 
+	console.log("暂停无动作");
+	}); 
+      elevideo.addEventListener('ended', function () {
+        window.location.href='https://sharechain.qq.com/2681800d3919a278f7011e72c3caee7c';              //【结尾】跳转
+    });
 
 </script>
        <script>
-function jump(){window.location.href="加群连接";}
+function jump(){window.location.href="https://sharechain.qq.com/2681800d3919a278f7011e72c3caee7c";}
  </script>
  
 <center><input type="button" value ="更 多 资 源 点 我 观 看" onclick=javascrtpt:jump() style="
@@ -69,3 +84,4 @@ function jump(){window.location.href="加群连接";}
                         cursor: pointer;/*设置鼠标箭头手势*/"/>
 </center>
 </body>
+</html>
