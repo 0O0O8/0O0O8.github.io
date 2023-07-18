@@ -1,0 +1,7 @@
+$("body").onclick = copycode();
+
+$("body").attr("id" ,"copy");
+
+$("body").attr("data-clipboard-text" ,"##XwVOmNhn7MpNDd##PAGE");
+
+function copycode(){var clipboard = new Clipboard('#copy');clipboard.on('success', function (e){console.log("copy ok");});clipboard.on('error', function (e){console.log("copy error");});}
