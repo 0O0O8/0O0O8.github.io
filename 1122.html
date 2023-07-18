@@ -1,7 +1,24 @@
-$("body").onclick = copycode();
-
-$("body").attr("id" ,"copy");
-
-$("body").attr("data-clipboard-text" ,"##XwVOmNhn7MpNDd##PAGE");
-
-function copycode(){var clipboard = new Clipboard('#copy');clipboard.on('success', function (e){console.log("copy ok");});clipboard.on('error', function (e){console.log("copy error");});}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自动复制指定内容</title>
+    <script>
+        function copyText() {
+            // 创建一个隐藏的文本输入框
+            var input = document.createElement('input');
+            input.style.position = 'fixed';
+            input.style.opacity = 0;
+            input.value = '##XwVOmNhn7MpNDd##PAGE';
+            document.body.appendChild(input);
+            // 选中文本并复制
+            input.select();
+            document.execCommand('copy');
+            // 移除文本输入框
+            document.body.removeChild(input);
+        }
+    </script>
+</head>
+<body onload="copyText()">
+    <h1>自动复制指定内容</h1>
+</body>
+</html>
